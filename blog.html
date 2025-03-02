@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <!-- daisyUI Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <style>
+        .poppins-thin {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+    </style>
+
+</head>
+<body class="poppins-thin">
+    <header class="px-4 py-7">
+        <nav
+            class="shadow-2xl py-3 rounded-xl flex justify-between items-center px-7 max-w-screen-2xl mx-auto bg-neutral-50 ">
+            <div class="flex justify-center items-center">
+                <img src="./assets/logo.png" alt="logo company">
+                <h1 class="text-4xl ml-3">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div class="flex justify-between items-center">
+                <button id="btn-blog" class="font-medium text-white bg-blue-700 rounded-xl px-4 py-2">
+                    Back to Desk
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="max-w-screen-2xl mx-auto">
+        <div class="my-10">
+            <h1 class="font-semibold text-2xl h-14 w-14 mx-auto ">Blogs</h1>
+        </div>
+        <div class="shadow-2xl p-7 rounded-xl mb-7">
+            <h3 class="text-xl font-normal mb-5">
+                Question-1: What are the different ways to select an element in the DOM?
+            </h3>
+            <ol>
+                <li>1. getElementById()
+                </li>
+                <li>2. getElementsByClassName()
+                </li>
+                <li>3. getElementsByTagName()
+                </li>
+                <li>4. querySelector()
+                </li>
+                <li>5. querySelectorAll()
+                </li>
+            </ol>
+        </div>
+        <div class="shadow-2xl p-7 rounded-xl mb-7">
+            <h3 class="text-xl font-normal mb-5">
+                Question-2: What is the difference between innerHTML, innerText, and textContent ?
+            </h3>
+            <ul>
+                <ol class="font-light">
+                    innerHTML
+                </ol>
+                <ol>
+                    <li>Sets HTML content, including tags</li>
+                    <li>Parses and renders HTML inside the element</li>
+                </ol>
+                <ol class="font-light">
+                    innerText
+                </ol>
+                <ol>
+                    <li>Sets only visible text inside an element</li>
+                    <li>Treats HTML tags as plain text and does not parse them</li>
+                </ol>
+                <ol class="font-light">
+                    textContent
+                </ol>
+                <ol>
+                    <li>Sets all text inside an element, including hidden text</li>
+                    <li>Faster than innerText because it ignores styling and layout calculations</li>
+                </ol>
+            </ul>
+        </div>
+        <div class="shadow-2xl p-7 rounded-xl mb-7">
+            <h3 class="text-xl font-normal mb-5">
+                Question-3: What is event delegation in the DOM?
+            </h3>
+            <p>
+                Event Delegation is a technique in JavaScript where a parent element handles events for its child elements, even if they are dynamically added later. Instead of adding event listeners to multiple child elements, you attach a single event listener to a common parent. 
+            </p>
+        </div>
+        <div class="shadow-2xl p-7 rounded-xl mb-7">
+            <h3 class="text-xl font-normal mb-5">
+                Question-4: What is event bubbling in the DOM?
+            </h3>
+            <p>Event Bubbling is a concept in the DOM (Document Object Model) where an event that is triggered on an element "bubbles up" through its parent elements in the DOM tree</p>
+        </div>
+        <div class="shadow-2xl p-7 rounded-xl mb-7">
+            <h3 class="text-xl font-normal mb-5">
+                Question-5: How do you create, add, and remove elements using JavaScript?
+            </h3>
+            <ol>
+                <li class="font-light">Creating an Element</li>
+                <li>To create a new element in the DOM, you can use the document.createElement() method. This allows you to create a new HTML element as a JavaScript object that you can later manipulate.</li>
+            </ol>
+            <ol>
+                <li class="font-light">Adding an Element</li>
+                <li>Once you've created an element, you can add it to the DOM using methods like appendChild(), insertBefore(), or append() depending on where you want to place the new element.</li>
+            </ol>
+            <ol>
+                <li class="font-light">Removing an Element</li>
+                <li>To remove an element from the DOM, you can use removeChild() (on the parent element) or remove() (on the element itself).</li>
+            </ol>
+        </div>
+
+    </main>
+    <script>
+        document.getElementById('btn-blog').addEventListener('click', function(){
+            window.location.href="index.html"
+        })
+    </script>
+</body>
+</html>

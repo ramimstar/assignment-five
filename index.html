@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- daisyUI Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <style>
+        .poppins-thin {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+        .comments{
+            background-color: hsl(160, 68%, 91%);
+            border-radius: 20px;
+            padding: 12px;
+            margin: 0px auto;
+            width: 340px;
+            height: 80px;
+            font-weight: 500;
+        }
+    </style>
+
+
+</head>
+
+<body class="poppins-thin mt-8 bg-slate-100">
+    <header class="px-4 py-7">
+        <nav
+            class="shadow-2xl py-3 rounded-xl flex justify-between items-center px-7 max-w-screen-2xl mx-auto bg-neutral-50 ">
+            <div class="flex justify-center items-center">
+                <img src="./assets/logo.png" alt="logo company">
+                <h1 class="text-4xl ml-3">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div class="flex justify-between items-center">
+                <button class="flex px-3 py-2 rounded-3xl bg-slate-100">
+                    <img class="w-8 h-8" src="./assets/checkbox.png" alt="checkbox">
+                    <p id="task-completed" class="ml-2 text-3xl font-bold">23</p>
+                </button>
+                <button id="btn-change-bg" class="ml-10 rounded-full bg-slate-200">
+                    <img class="p-2" src="./assets/theme-btn.png" alt="">
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class=" max-w-screen-2xl mx-auto ">
+        <div class="grid grid-cols-4 p-3 gap-3">
+            <div class="col-span-3 bg-neutral-50 rounded-2xl p-3">
+
+
+                <!-- task assigner -->
+                <div class="grid grid-cols-4 gap-4 pb-5">
+                    <div class=" bg-slate-300 rounded-xl ">
+                        <div class="flex justify-around items-center py-4">
+                            <div class="mr-2 pl-1">
+                                <button class="p-3 bg-neutral-50 rounded-full">
+                                    <img class="" src="./assets/checkbox.png" alt="">
+                                </button>
+                            </div>
+                            <div>
+                                <p class="font-medium">Task Assigned</p>
+                                <h2 id="assigned" class="text-2xl font-bold">06</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Discover Something -->
+                    <div id="discover"
+                        class="col-span-2 bg-gradient-to-r from-blue-700 to-blue-300 rounded-xl flex justify-center items-center">
+                        <div class="flex justify-center items-center">
+                            <img class="mr-5" src="./assets/board.png" alt="">
+                            <p class="w-3/5 text-white text-xl font-medium">Discover Something New Today!</p>
+                        </div>
+                    </div>
+
+                    <!-- live date -->
+                    <div class="bg-slate-300 rounded-xl flex justify-center items-center">
+                        <div>
+                            <button
+                                class="bg-neutral-50 p-2 rounded-full w-14 h-14 mr-2 ml-1 flex justify-center items-center">
+                                <img class="" src="./assets/calender.png" alt="">
+                            </button>
+                        </div>
+                        <div class="">
+                            <p id="live-Date" class="text-xl text-black w-3/5">
+
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- card section -->
+
+
+                <div class="grid grid-cols-3 gap-4">
+
+
+                    <!-- card-1 -->
+                    <div class="bg-slate-200 rounded-xl p-3">
+                        <button class="ml-3 bg-neutral-50 px-4 py-2 rounded-xl mt-4 mb-4 font-light">ShopEase</button>
+                        <div class="mx-auto mb-5">
+                            <h2 class="text-xl mx-auto font-medium max-w-80">Fix Mobile Button Issue</h2>
+                        </div>
+                        <p class="overflow-hidden h-24 max-w-80  bg-neutral-50 rounded-xl p-5 mx-auto  font-extralight">
+                            Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
+                            properly and ensure onClick works properly
+                        </p>
+                        <div class="flex justify-between items-center mb-5 mt-7 max-w-80 mx-auto">
+                            <div>
+                                <p>Deadline</p>
+                                <h3 class="font-medium">21 March 2025</h3>
+                            </div>
+                            <div>
+                                <button class="bg-blue-700 text-white font-semibold px-4 py-2 rounded-xl" id="btn-one">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-2 -->
+                    <div class="bg-slate-200 rounded-xl p-3">
+                        <button  class="ml-3 bg-neutral-50 px-4 py-2 rounded-xl mt-4 mb-4 font-light">CloudSync</button>
+                        <div class="mx-auto mb-5">
+                            <h2 class="text-xl mx-auto font-medium max-w-80">
+                                Add Dark Mode
+                            </h2>
+                        </div>
+                        <p class="overflow-hidden h-24 max-w-80  bg-neutral-50 rounded-xl p-5 mx-auto font-extralight">
+                            Store the user's preference in localStorage, update CSS variables dynamically, and apply a
+                            smooth transition effect.
+                        </p>
+                        <div class="flex justify-between items-center mb-5 mt-7 max-w-80 mx-auto">
+                            <div>
+                                <p>Deadline</p>
+                                <h3 class="font-medium">21 March 2025</h3>
+                            </div>
+                            <div>
+                                <button id="btn-two" 
+                                    class="bg-blue-700 text-white font-semibold px-4 py-2 rounded-xl">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-3 -->
+                    <div class="bg-slate-200 rounded-xl p-3">
+                        <button class="ml-3 bg-neutral-50 px-4 py-2 rounded-xl mt-4 mb-4 font-light">SwiftPay</button>
+                        <div class="mx-auto mb-5">
+                            <h2 class="text-xl mx-auto font-medium max-w-80">Optimize Home page </h2>
+                        </div>
+                        <p class="overflow-hidden h-24 max-w-80  bg-neutral-50 rounded-xl p-5 mx-auto font-extralight">
+                            Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
+                            properly and ensure onClick works properly
+
+                        </p>
+                        <div class="flex justify-between items-center mb-5 mt-7 max-w-80 mx-auto">
+                            <div>
+                                <p>Deadline</p>
+                                <h3 class="font-medium">21 March 2025</h3>
+                            </div>
+                            <div>
+                                <button id="btn-three" 
+                                    class="bg-blue-700 text-white font-semibold px-4 py-2 rounded-xl">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-4 -->
+                    <div class="bg-slate-200 rounded-xl p-3">
+                        <button class="ml-3 bg-neutral-50 px-4 py-2 rounded-xl mt-4 mb-4 font-light">Meta</button>
+                        <div class="mx-auto mb-5">
+                            <h2 class="text-xl mx-auto font-medium max-w-80">Add new emoji 🤲 </h2>
+                        </div>
+                        <p class="overflow-hidden h-24 max-w-80  bg-neutral-50 rounded-xl p-5 mx-auto font-extralight">
+                            Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
+                            properly and ensure onClick works properly
+                        </p>
+                        <div class="flex justify-between items-center mb-5 mt-7 max-w-80 mx-auto">
+                            <div>
+                                <p>Deadline</p>
+                                <h3 class="font-medium">21 March 2025</h3>
+                            </div>
+                            <div>
+                                <button id="btn-four" 
+                                    class="bg-blue-700 text-white font-semibold px-4 py-2 rounded-xl">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-5 -->
+                    <div class="bg-slate-200 rounded-xl p-3">
+                        <button class="ml-3 bg-neutral-50 px-4 py-2 rounded-xl mt-4 mb-4 font-light">Google LLC</button>
+                        <div class="mx-auto mb-5">
+                            <h2 class="text-xl mx-auto font-medium max-w-80">
+                                Integrate OpenAI API
+                            </h2>
+                        </div>
+                        <p class="overflow-hidden h-24 max-w-80  bg-neutral-50 rounded-xl p-5 mx-auto font-extralight">
+                            Store the user's preference in localStorage, update CSS variables dynamically, and apply a
+                            smooth transition effect.
+                        </p>
+                        <div class="flex justify-between items-center mb-5 mt-7 max-w-80 mx-auto">
+                            <div>
+                                <p>Deadline</p>
+                                <h3 class="font-medium">21 March 2025</h3>
+                            </div>
+                            <div>
+                                <button id="btn-five" 
+                                    class="bg-blue-700 text-white font-semibold px-4 py-2 rounded-xl">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card-6 -->
+                    <div class="bg-slate-200 rounded-xl p-3">
+                        <button class="ml-3 bg-neutral-50 px-4 py-2 rounded-xl mt-4 mb-4 font-light">Glassdoar</button>
+                        <div class="mx-auto mb-5">
+                            <h2 id="title-six" class="text-xl mx-auto font-medium max-w-80">Improve Job searching</h2>
+                        </div>
+                        <p class="overflow-hidden h-24 max-w-80  bg-neutral-50 rounded-xl p-5 mx-auto font-extralight">
+                            Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
+                            properly and ensure onClick works properly
+
+                        </p>
+                        <div class="flex justify-between items-center mb-5 mt-7 max-w-80 mx-auto">
+                            <div>
+                                <p>Deadline</p>
+                                <h3 class="font-medium">21 March 2025</h3>
+                            </div>
+                            <div>
+                                <button id="btn-six" 
+                                    class="bg-blue-700 text-white font-semibold px-4 py-2 rounded-xl">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- notification part -->
+            <div class="bg-neutral-50 rounded-xl">
+                <div class="flex justify-center items-center mt-7">
+                    <img class="mr-3" src="./assets/activity.png" alt="">
+                    <h3 class="font-normal ">Activity Log</h3>
+                </div>
+                <div class="flex justify-center items-center mt-4">
+                    <button id="clear-btn" class="bg-blue-700 px-4 py-2  rounded-xl font-medium text-white">Clear History</button>
+                </div>
+
+
+                <div id="comment-section" font-light" class="mt-5 space-y-4 ">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="javascript/script.js"></script>
+    <script src="javascript/utilitis.js"></script>
+    <script>
+
+        function liveDayMonthYear() {
+            const options = { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' };
+            const liveDateFormate = new Date().toLocaleDateString('en-US', options).replace(',', '');
+            document.getElementById("live-Date").innerText = liveDateFormate;
+        };
+
+
+        liveDayMonthYear();
+
+        document.getElementById('discover').addEventListener('click', function () {
+            window.location.href = "blog.html"
+        });
+
+    </script>
+</body>
+
+</html>

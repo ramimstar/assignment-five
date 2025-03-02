@@ -144,7 +144,7 @@ function checkBothDisabled() {
     const btnSix = document.getElementById("btn-six");
 
     if (btnOne.disabled && btnTwo.disabled && btnThree.disabled && btnFour.disabled && btnFive.disabled && btnSix.disabled) {
-        alert('congrates!!! You have completed all the current task');
+        alert('congratulate!!! You have completed all the current task');
     }
 };
 
